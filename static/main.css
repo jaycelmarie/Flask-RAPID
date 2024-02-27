@@ -1,0 +1,68 @@
+body{
+    /* background-image: linear-gradient(#034d5e, #1c2777, #3109c1, #1e065f, #034d5e); */
+    background-image: url('https://cliply.co/wp-content/uploads/2019/06/401906190_ITS_COMPLICATED_400px.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+a{
+    text-align: center;
+}
+ 
+button {
+    border: 2px solid #000000;
+    padding: 25px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 4px 2px;
+    cursor: pointer;
+    color:#ffffff;
+    border-radius: 15px;
+    width:100%;
+    height: 95%;
+}
+
+h1{
+    color:#000000;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+
+.container{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 100px;
+    /* background:linear-gradient(to bottom right, #676669, #2b2b2c, #676669); */
+    padding: 100px;
+    padding-top: 150px;
+    border-radius: 20px;
+    background-image: url('https://cliply.co/wp-content/uploads/2021/07/402107330_WHITE_WAVES_400px.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#openCam{
+    background: linear-gradient(#b4284b, #8d1533, #470b1b);
+}
+
+#rapid{
+    background: linear-gradient(#b4284b, #8d1533, #470b1b);
+}
+
+#rapidFA{
+    background: linear-gradient(#b4284b, #8d1533, #470b1b);
+}
+
+#rapidFGFA{
+    background: linear-gradient(#b4284b, #8d1533, #470b1b);
+}
