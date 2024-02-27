@@ -4,29 +4,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>File Uploads</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <title>Fisheye RAPID Algorithm</title>
+  <link rel="stylesheet" href="../static/main.css">
 </head>
 <body>
-  <div class="app">
+ 	<div class="container">
+        
+        <h1>Menu</h1>
 
-    <div class="form-section">
-
-      <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="file">
-        <input type="submit" value="Upload">
-      </form>
-
-    </div>
-
-    <div class="images-section">
-      {% for image in images %}
-        <a href="{{ url_for('serve_image', filename=image) }}" target="_blank">
-          <img src="{{ url_for('serve_image', filename=image) }}"/>
+        <!-- Open Camera -->
+        <a href="/">
+        <button type="button" id="openCam">CAMERA</button>
         </a>
-      {% endfor %}
+       
+        <!-- Select RAPID weight Image Button -->
+        <a href="rapid.html">
+        <button type="button" id="rapid">RAPID</button>
+        </a>
+
+        <!-- Select RAPID-FA weight Image Button -->
+        <a href="rapidfa.html">
+        <button type="button" id="rapidFA">RAPID-FA</button>
+        </a>
+        
+        <!-- Select RAPID-FGFA weight Image Button -->
+        <a href="rapidfgfa.html">
+        <button type="button" id="rapidFGFA">RAPID-FGFA</button>
+        </a>
+        
+
     </div>
-    
-  </div>
 </body>
 </html>
