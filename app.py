@@ -2,6 +2,7 @@ from flask import Flask, render_template, redirect, request, send_from_directory
 from werkzeug.exceptions import RequestEntityTooLarge
 from werkzeug.utils import secure_filename
 import os
+from api import Detector
 
 app = Flask(__name__)
 app.config['UPLOAD_DIRECTORY'] = 'uploads/'
@@ -42,4 +43,13 @@ def upload():
 
 @app.route('/serve-image/<filename>', methods=['GET'])
 def serve_image(filename):
-  return send_from_directory(app.config['UPLOAD_DIRECTORY'], filename)
+  # Initialize detector
+  detector = Detector(model_name='rapid',
+                      weights_path='./weights/pL1_MWHB1024_Mar11_4000.ckpt',
+                      use_cuda=False)
+
+  # A simple example to run on a single image and plt.imshow() it
+  img = detector.detect_one(img_path=filename,
+                      input_size=1024, conf_thres=0.3,
+                      visualize=True)
+  return send_from_directory(app.config['UPLOAD_DIRECTORY'], img)
