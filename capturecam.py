@@ -5,7 +5,7 @@ import os
 # Set countdown timer
 timer = int(5)
 
-source = ----
+source = "rtsp://user:test1234@192.168.1.101:8554/profile0"      
 cam = cv2.VideoCapture(source)
 
 while True:
