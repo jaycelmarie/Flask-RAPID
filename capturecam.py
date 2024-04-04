@@ -7,11 +7,8 @@ import numpy as np
 # Set countdown timer
 timer = int(20)
 
-<<<<<<< HEAD
-source = "rtsp://user:test1234@192.168.1.101:8554/profile0"      
-=======
-source = "rtsp://user:test1234@192.168.1.101:8554/profile0"
->>>>>>> 8ea2ba497ebe3b7350383d3aaa99f8b459d73abe
+
+source = ""
 cam = cv2.VideoCapture(source)
 
 while True:
