@@ -25,7 +25,7 @@ def camerahtml():
 def camera():
  print("Turning on Camera...")
  
- source = "rtsp://user:test1234@192.168.1.101:8554/profile0"
+ source = "rtsp://user:test@/profile0"
  cap = cv2.VideoCapture(source)
  
  while cap.isOpened():
